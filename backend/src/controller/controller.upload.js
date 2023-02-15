@@ -1,6 +1,16 @@
+const Post = require('../models/postSchema')
+
 const uploadFiles = async (req, res) => {
-  console.log(req.file);
-  return res.json({ message: "estou na função" })
+  const { originalname, size, filename  } = req.file;
+  const post = await Post.create({
+    name: originalname,
+    size: size,
+    key: filename,
+    url: ''
+  })
+
+
+  return res.json( post )
 }
 
 module.exports = uploadFiles;
