@@ -10,10 +10,11 @@ export default class Upload extends Component {
         { ({ getRootProps, getInputProps, isDragActive, isDragReject }) => (
           <DropContainer
           { ...getRootProps() }
-          isDragActive={isDragActive}
-          isDragReject={isDragReject}
+          isDragActive={ isDragActive }
+          isDragReject={ isDragReject }
           >
-            <input { ...getInputProps }/>
+            <input { ...getInputProps() }/>
+            Solte seus Arquivos aqui
           </DropContainer>
         )}
         
