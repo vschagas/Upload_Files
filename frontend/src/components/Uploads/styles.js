@@ -15,10 +15,22 @@ export const DropContainer = styled.div.attrs({
   border-radius: 4px;
   cursor: pointer;
 
-  transition: 0.2s ease
+  transition: height 0.2s ease;
 
   ${ props => props.isDragActive && dradActive };
   ${ props => props.isDragReject && dragReject };
 `
 
-export const UPloadMessage = styled.p``;
+const messageColor = {
+  default: '#999',
+  error: '#e57878',
+  success: '#78e5d5'
+}
+
+export const UPloadMessage = styled.p`
+  display: flex;
+  color: ${props => messageColor[props.type || 'default']};
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+`;
