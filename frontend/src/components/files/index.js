@@ -1,7 +1,7 @@
 import React from "react";
-import CircularProgressbar from 'react-circular-progressbar'
-import { Container, FileInfo, Preview } from './stules'
-import { MdCheckCircle, MdError, Mdlink } from 'react-icons/md'
+import { CircularProgressbar } from 'react-circular-progressbar'
+import { Container, FileInfo, Preview } from './styles'
+import { MdCheckCircle, MdError, MdLink } from "react-icons/md";
 
 const FileList = () => (
   <Container>
@@ -28,7 +28,7 @@ const FileList = () => (
           target='_blank'
           rel='noopener noreferrer'
         >
-          <Mdlink style={{ marginRigth: 8 }} size={ 24 } color='#222' />
+          <MdLink style={{ marginRigth: 8 }} size={ 24 } color='#222' />
         </a>
         <MdCheckCircle size={ 24 } color='#78e5d5'/>
         <MdError size={ 24 } color='e57878'/> 
