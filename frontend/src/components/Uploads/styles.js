@@ -29,7 +29,7 @@ const messageColor = {
 
 export const UPloadMessage = styled.p`
   display: flex;
-  color: ${props => messageColor[props.type || 'default']};
+  color: ${ props => messageColor[props.type || 'default'] };
   justify-content: center;
   align-items: center;
   padding: 15px 0;
