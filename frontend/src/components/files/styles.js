@@ -29,7 +29,7 @@ export const FileInfo = styled.div`
       color: #999;
       margin-top: 5px;
 
-      button: {
+      button {
         border: 0;
         background: transparent;
         color: #e57878;

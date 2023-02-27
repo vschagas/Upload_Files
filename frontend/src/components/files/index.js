@@ -12,7 +12,11 @@ const FileList = ({ files }) => (
           <div>
             <strong>{ uploadedFile.name }</strong>
             <span>
-              { uploadedFile.readableSize } <button onClick={ () => {} }>Excluir</button>
+              { uploadedFile.readableSize }
+              {' '}
+              { !! uploadedFile.name && (
+                <button onClick={ () => {} }>Excluir</button>
+              )}
             </span>
           </div>
         </FileInfo>
