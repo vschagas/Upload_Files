@@ -5,6 +5,7 @@ import Upload from './components/Uploads'
 import FileList from './components/files/'
 import { uniqueId } from 'lodash'
 import { filesize } from 'filesize'
+import api from './services/api'
 
 export class App extends Component {
   state = {
@@ -27,6 +28,13 @@ export class App extends Component {
     this.setState({
       uploadedFiles: this.state.uploadedFiles.concat(uploadedFiles)
     })
+
+    uploadedFiles.forEach(this.proccessUpload);
+
+    proccessUpload = (uploadedFile) => {
+
+    }
+
   };
 
   render() {
