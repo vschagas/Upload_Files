@@ -6,6 +6,6 @@ const multerConfig = require('../config/multer')
 
 const route = Router()
 
-route.post('/', multer(multerConfig).single('file'), uploadFiles)
+route.post('/posts', multer(multerConfig).single('file'), uploadFiles)
 
 module.exports = route;
